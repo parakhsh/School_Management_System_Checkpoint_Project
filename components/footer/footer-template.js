@@ -1,6 +1,6 @@
 
-export default function footer (){
-    return
+export default function footer_template (){
+    return `
      <footer class="footer">
     <div>
       <ul>
@@ -8,5 +8,5 @@ export default function footer (){
         <li><a href="">Contact</a></li>
       </ul>
     </div>
-    </footer>
+    </footer>`
 }

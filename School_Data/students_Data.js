@@ -1,0 +1,280 @@
+const students = [
+    {
+      id: 3001,
+      classId: 1,
+      name: "Mark Anderson",
+      department: "fullstack",
+      subjects: {
+        programming: 85,
+        webDevelopment: 78,
+        databases: 90,
+      },
+    },
+    {
+      id: 3002,
+      classId: 1,
+      name: "Sarah Brown",
+      department: "fullstack",
+      subjects: {
+        programming: 92,
+        webDevelopment: 95,
+        databases: 88,
+      },
+    },
+    {
+      id: 3003,
+      classId: 1,
+      name: "Charlie Evans",
+      department: "fullstack",
+      subjects: {
+        programming: 75,
+        webDevelopment: 88,
+        databases: 70,
+      },
+    },
+    {
+      id: 3019,
+      classId: 1,
+      name: "Zoe Foster",
+      department: "fullstack",
+      subjects: {
+        programming: 60,
+        webDevelopment: 70,
+        databases: 75,
+      },
+    },
+    {
+      id: 3025,
+      classId: 1,
+      name: "Ryan Turner",
+      department: "fullstack",
+      subjects: {
+        programming: 78,
+        webDevelopment: 82,
+        databases: 85,
+      },
+    },
+    {
+      id: 3004,
+      classId: 2,
+      name: "Lily Miller",
+      department: "cloud",
+      subjects: {
+        cloudComputing: 94,
+        virtualization: 89,
+        networking: 92,
+      },
+    },
+    {
+      id: 3005,
+      classId: 2,
+      name: "Jake White",
+      department: "cloud",
+      subjects: {
+        cloudComputing: 90,
+        virtualization: 88,
+        networking: 85,
+      },
+    },
+    {
+      id: 3006,
+      classId: 2,
+      name: "Eva Davis",
+      department: "cloud",
+      subjects: {
+        cloudComputing: 97,
+        virtualization: 94,
+        networking: 96,
+      },
+    },
+    {
+      id: 3020,
+      classId: 2,
+      name: "Mia Harris",
+      department: "cloud",
+      subjects: {
+        cloudComputing: 88,
+        virtualization: 95,
+        networking: 91,
+      },
+    },
+    {
+      id: 3024,
+      classId: 2,
+      name: "Owen Turner",
+      department: "cloud",
+      subjects: {
+        cloudComputing: 92,
+        virtualization: 90,
+        networking: 94,
+      },
+    },
+    {
+      id: 3007,
+      classId: 3,
+      name: "Nathan Robinson",
+      department: "dataScience",
+      subjects: {
+        machineLearning: 85,
+        dataAnalytics: 78,
+        statistics: 80,
+      },
+    },
+    {
+      id: 3008,
+      classId: 3,
+      name: "Ella Thompson",
+      department: "dataScience",
+      subjects: {
+        machineLearning: 65,
+        dataAnalytics: 60,
+        statistics: 75,
+      },
+    },
+    {
+      id: 3009,
+      classId: 3,
+      name: "David Turner",
+      department: "dataScience",
+      subjects: {
+        machineLearning: 98,
+        dataAnalytics: 93,
+        statistics: 95,
+      },
+    },
+    {
+      id: 3010,
+      classId: 3,
+      name: "Sophie Miller",
+      department: "dataScience",
+      subjects: {
+        machineLearning: 92,
+        dataAnalytics: 80,
+        statistics: 78,
+      },
+    },
+    {
+      id: 3023,
+      classId: 3,
+      name: "Mason White",
+      department: "dataScience",
+      subjects: {
+        machineLearning: 87,
+        dataAnalytics: 82,
+        statistics: 85,
+      },
+    },
+    {
+      id: 3011,
+      classId: 4,
+      name: "Harper Adams",
+      department: "mobile",
+      subjects: {
+        mobileDevelopment: 92,
+        appDesign: 88,
+        appTesting: 90,
+      },
+    },
+    {
+      id: 3012,
+      classId: 4,
+      name: "Carter Taylor",
+      department: "mobile",
+      subjects: {
+        mobileDevelopment: 78,
+        appDesign: 70,
+        appTesting: 75,
+      },
+    },
+    {
+      id: 3013,
+      classId: 4,
+      name: "Aria Cooper",
+      department: "mobile",
+      subjects: {
+        mobileDevelopment: 90,
+        appDesign: 92,
+        appTesting: 94,
+      },
+    },
+    {
+      id: 3022,
+      classId: 4,
+      name: "Liam Turner",
+      department: "mobile",
+      subjects: {
+        mobileDevelopment: 80,
+        appDesign: 75,
+        appTesting: 78,
+      },
+    },
+    {
+      id: 3014,
+      classId: 4,
+      name: "Ethan Harris",
+      department: "mobile",
+      subjects: {
+        mobileDevelopment: 76,
+        appDesign: 78,
+        appTesting: 80,
+      },
+    },
+    {
+      id: 3015,
+      classId: 5,
+      name: "Chloe Rogers",
+      department: "security",
+      subjects: {
+        networkSecurity: 88,
+        cybersecurity: 85,
+        encryption: 89,
+      },
+    },
+    {
+      id: 3016,
+      classId: 5,
+      name: "Lucas Parker",
+      department: "security",
+      subjects: {
+        networkSecurity: 80,
+        cybersecurity: 60,
+        encryption: 72,
+      },
+    },
+    {
+      id: 3017,
+      classId: 5,
+      name: "Zoe Turner",
+      department: "security",
+      subjects: {
+        networkSecurity: 92,
+        cybersecurity: 90,
+        encryption: 94,
+      },
+    },
+    {
+      id: 3018,
+      classId: 5,
+      name: "Jackson Harris",
+      department: "security",
+      subjects: {
+        networkSecurity: 85,
+        cybersecurity: 82,
+        encryption: 88,
+      },
+    },
+    {
+      id: 3021,
+      classId: 5,
+      name: "Luna Brown",
+      department: "security",
+      subjects: {
+        networkSecurity: 78,
+        cybersecurity: 80,
+        encryption: 96,
+      },
+    },
+  ];
+
+
+  export default students

@@ -11,3 +11,6 @@ myMmain.innerHTML= header()+ content()+ footer()
 
 
 console.log(studentsCount,teachersCount,classCount)
+
+
+

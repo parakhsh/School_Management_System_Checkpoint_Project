@@ -16,3 +16,4 @@ export default function footer_template() {
     </footer>
   `;
 }
+

@@ -8,22 +8,28 @@ export default function header_template() {
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" id="home-link" aria-current="page" href="./pages/home.js">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Classes</a>
+            <a class="nav-link active" id="classes-link" aria-current="page" href="./pages/classes.js">Classes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Teachers</a>
+            <a class="nav-link active" id="teachers-link" aria-current="page" href="./pages/teachers.js">Teachers</a>
           </li>
           <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Students</a>
+          <a class="nav-link active" id="students-link" aria-current="page" href="./pages/students.js">Students</a>
           </li>
         </ul>
-        <picture>
-          <source srcset="..." type="image/svg+xml">
-          <img src="./pictures/person.png" class="rounded" alt="...">
+        <picture class=w-10 h-10"">
+        <img src="./pictures/person.png" class="custom-image rounded" alt="Person">
+        <style>
+        .custom-image {
+         width: 50px; 
+         height: auto; 
+                      }
+        </style>
         </picture>
+        <div id="main-container"></div>
         </form>
       </div>
     </div>
@@ -31,4 +37,3 @@ export default function header_template() {
 
 `;
 }
-

@@ -1,18 +1,24 @@
-import header from "../components/header/header-template.js";
-import footer from "../components/footer/footer-template.js";
+// home.js
 
-const HomeComponent = {
-  render: function() {
-    return `
-      ${header()}
-      <div class="container">
-        <h1>Welcome to My School Management System</h1>
-        <p>This system helps you manage classes, students, and teachers efficiently.</p>
-        <p>Click on the navigation links to explore different sections.</p>
-      </div>
-      ${footer()}
-    `;
-  }
-};
+import headerTemplate from "./components/header/header-template.js";
+import footerTemplate from "./components/footer/footer-template.js";
+import { loadPage } from "./loadPage.js";
 
-export default HomeComponent;
+
+
+export default function homePage(){
+  const myMain = document.querySelector(".main-container");
+
+// Set initial content
+myMain.innerHTML = headerTemplate() + '<h2>Welcome to the Home Page</h2>' + footerTemplate();
+
+}
+
+
+// Add event listeners to navigation links
+document.getElementById("home-link").addEventListener("click", () => loadPage('home'));
+document.getElementById("classes-link").addEventListener("click", () => loadPage('classes'));
+document.getElementById("teachers-link").addEventListener("click", () => loadPage('teachers'));
+document.getElementById("students-link").addEventListener("click", () => loadPage('students'));
+
+// ... other code

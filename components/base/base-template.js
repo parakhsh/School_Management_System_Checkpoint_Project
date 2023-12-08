@@ -1,4 +1,4 @@
-function base_template(){
+export default function base_template(){
     return `
 
 <div class="main-base">

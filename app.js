@@ -1,13 +1,19 @@
-import content from "./components/content/content-template.js";
 import header from "./components/header/header-template.js";
+import content from "./components/content/content-template.js";
 import footer from "./components/footer/footer-template.js";
+
 import { loadPage } from "./pages/loadPage.js";
 
 
-const myMmain = document.querySelector(".main-container");
-myMmain.innerHTML = header() + content() + footer();
+const mainContainer = document.querySelector("#main-container");
+mainContainer.innerHTML = header() + content() + footer();
 
-document.getElementById("home-link").addEventListener("click", () => loadPage('home'));
-document.getElementById("classes-link").addEventListener("click", () => loadPage('classes'));
-document.getElementById("teachers-link").addEventListener("click", () => loadPage('teachers'));
-document.getElementById("students-link").addEventListener("click", () => loadPage('students'));
+
+function  handlePageChange(pEvent){
+    pEvent.preventDefault();
+    const nextPage = pEvent.target.dataset.pagename;
+    loadPage(nextPage)
+}
+
+const anchorItems = document.querySelectorAll('.nav-item a')
+Array.from(anchorItems).forEach((link)=> link.addEventListener("click", handlePageChange));

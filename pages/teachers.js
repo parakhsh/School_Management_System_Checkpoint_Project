@@ -1,24 +1,79 @@
-import teachers from "../School_Data/teachers_Data";
+let studentsLinkId;
+let classesLinkId;
 
-export default function teachersContent() {
+export default function generateTeacherContent() {
   return `
-      <div class="container">
-          <h1>Hello Teachers</h1>
-          <p class="lead">Welcome to the Teachers Page. This is a simple paragraph styled with Bootstrap.</p>
+  <h1 class="mb-5 ">Teachers</h1>
+
+  <div class="container mt-5">
+  <div class="row">
+      <div class="col-md-6">
+          <div class="card mb-3">
+              <div class="card-body">
+              <div class="d-flex justify-content-end">
+              <buttonclass="btn btn-custom " type="button" id="edit">
+              <img src="./pictures/edit.png" alt="Add New Student" width="50" height="50"></button>
+              
+              <button class="btn btn-custom " type="buttonid="remove" ">
+              <img src="./pictures/minus.png" alt="Add New Student" width="50" height="50">
+              </button>
+              </div>
+                  <h5 class="card-title">Max Hermann</h5>
+                  <p class="card-text">Fullstack</p>
+                  
+                  <!-- Add link for Teachers -->
+                  <a href="#" id="${studentsLinkId}" class="card-link text-primary">Students</a>
+                  <a href="#" id="${classesLinkId}" class="card-link text-primary">Classes</a>
+              </div>
+          </div>
       </div>
-  `;
+      <div class="col-md-6">
+          <div class="card mb-3">
+              <div class="card-body">
+              <div class="d-flex justify-content-end">
+              <buttonclass="btn btn-custom " type="button" id="edit">
+              <img src="./pictures/edit.png" alt="Add New Student" width="50" height="50"></button>
+              
+              <button class="btn btn-custom " type="buttonid="remove" ">
+              <img src="./pictures/minus.png" alt="Add New Student" width="50" height="50">
+              </button>
+              </div>
+                  <h5 class="card-title">Anthony Egbe</h5>
+                  <p class="card-text">Cloud</p>
+                 
+                  <!-- Add link for Classes -->
+                  <a href="#"  class="card-link text-primary">Students</a>
+                  <a href="#" class="card-link text-primary">Classes</a>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="text-center">
+       <div class="d-grid gap-2 d-md justify-content-md-center">
+          <!-- Circular button with custom image -->
+          <button class="btn btn-custom " type="button">
+          <img src="./pictures/add.png" alt="Add New Student" width="50" height="50">
+          </button>
+          <p class="card-text">Add New Teacher</p>
+  </div>
+</div>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Your JavaScript code here
+  console.log("hiiiiii");
+});
+
+studentsLinkId = "studentsLink";
+classesLinkId = "classesLink";
+
+studen.tsLinkId.addEventListener('click', function() {
+  console.log("hiiiiii");
 }
+</script>
 
 
-
-
-function loadPage(pageName) {
-  // Specify the URL of the page
-  const pageUrl = `./pages/${pageName}.html`;
-
-  // Open the page in a new window
-  window.open(pageUrl, '_blank');
+`;
 }
-
-
-loadPage(teachers)

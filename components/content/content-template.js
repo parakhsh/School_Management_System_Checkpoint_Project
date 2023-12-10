@@ -1,11 +1,8 @@
 import { studentsCount,teachersCount,classCount} from "../../functions/functions.js";
 export default function content_template() {
   return `
-
-
-  <h1 class="text mt-5 p-4">Welcome Mirjam</h1></br></br>
-  
-    <div class="container text-center mt-5">
+    <div class="container text-center mt-5" id="content-container">
+      <h1 class="text mt-5 p-4">Welcome Mirjam</h1></br></br>
       <div class="row">
         <div class="col-md-4">
           <div class="card" style="height: 200px;">

@@ -1,34 +1,42 @@
+import generateHomeContent from "./home.js"
+import generateClassContent from "./classes.js"
+import generateTeacherContent from "./teachers.js"
+import generateStudentContent from "./students.js"
 
-// import homeTemplate from "./templates/home-template.js";
-// import classesTemplate from "./templates/classes-template.js";
-// import teachersTemplate from "./templates/teachers-template.js";
-// import studentsTemplate from "./templates/students-template.js";
-
-import header_template from "../components/header/header-template.js";
 
 export function loadPage(pageName) {
-    // Create a new window
-    const newWindow = window.open('', '_blank');
-  
     // Create a simple example content for each page
     let content;
+    let contentFunction;
     switch (pageName) {
       case 'home':
-        content = header_template ()
+        contentFunction = generateHomeContent;
         break;
-      case 'classes':
-        content = '<h2>Explore Classes Here</h2>';
+      case 'class':
+          // getRendederClassPAge
+          contentFunction = generateClassContent;
         break;
-      case 'teachers':
-        content = '<h2>Meet Our Teachers</h2>';
+      case 'teacher':
+          // getdata
+          contentFunction = generateTeacherContent;
         break;
-      case 'students':
-        content = '<h2>Meet Our Students</h2>';
+      case 'student':
+          // getdata
+          contentFunction = generateStudentContent;
         break;
       default:
         content = '<h2>Page not found</h2>';
     }
   
-    // Set the content of the new window with the dynamically generated HTML
-    newWindow.document.body.innerHTML = content;
+    // // Set the content of the new window with the dynamically generated HTML
+    // const contentContainer = document.querySelector('#content-container');
+    // contentContainer.innerHTML = content;
+    const contentContainer = document.querySelector('#content-container');
+    if (contentFunction && contentContainer) {
+      contentContainer.innerHTML = contentFunction();
+    } else {
+      console.error("Element with id 'content-container' not found or content function not defined.");
+    }
   }
+  
+  

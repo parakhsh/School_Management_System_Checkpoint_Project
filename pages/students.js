@@ -1,57 +1,57 @@
-// // students.js
+export default function generateStudentContent() {
+    return `
+    <h1 class="mb-5 ">Student</h1>
 
-// // Export the content function
-// export default function studentsContent() {
-//     return `
-//         <div class="container">
-//             <h1>Welcome to the School Management System</h1>
-//             <p class="lead">This is the home page content. Modify it as needed for your application.</p>
-//         </div>
-//     `;
-//   }
+    <div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <div class="card-body">
+                <div class="d-flex justify-content-end">
+                <buttonclass="btn btn-custom " type="button" id="edit">
+                <img src="./pictures/edit.png" alt="Add New Student" width="50" height="50"></button>
+                
+                <button class="btn btn-custom " type="buttonid="remove" ">
+                <img src="./pictures/minus.png" alt="Add New Student" width="50" height="50">
+                </button>
+                </div>
+                    <h5 class="card-title">Max Hermann</h5>
+                    <p class="card-text">Fullstack</p>
+                    <p class="card-text text-primary">Average Grade: 5.4</p>
+                    <!-- Add link for Teachers -->
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <div class="card-body">
+                <div class="d-flex justify-content-end">
+                <buttonclass="btn btn-custom " type="button" id="edit">
+                <img src="./pictures/edit.png" alt="Add New Student" width="50" height="50"></button>
+                
+                <button class="btn btn-custom " type="buttonid="remove" ">
+                <img src="./pictures/minus.png" alt="Add New Student" width="50" height="50">
+                </button>
+                </div>
+                    <h5 class="card-title">Anthony Egbe</h5>
+                    <p class="card-text">Cloud</p>
+                    <p class="card-text text-primary">Average Grade: 4.9</p>
+                    <!-- Add link for Classes -->
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+         <div class="d-grid gap-2 d-md justify-content-md-center">
+            <!-- Circular button with custom image -->
+            <button class="btn btn-custom " type="button">
+            <img src="./pictures/add.png" alt="Add New Student" width="50" height="50">
+            </button>
+            <p class="card-text">Add New Student</p>
+    </div>
+</div>
 
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Create the main container
-    var mainContainer = document.createElement('div');
-    mainContainer.className = 'main-container';
-    document.body.appendChild(mainContainer);
-
-    // Create the card container
-    var cardContainer = document.createElement('div');
-    cardContainer.className = 'card-container';
-    mainContainer.appendChild(cardContainer);
-
-    // Create the card
-    var card = document.createElement('div');
-    card.className = 'card';
-    cardContainer.appendChild(card);
-
-    // Create the card body
-    var cardBody = document.createElement('div');
-    cardBody.className = 'card-body';
-    card.appendChild(cardBody);
-
-    // Create the card title
-    var cardTitle = document.createElement('h5');
-    cardTitle.className = 'card-title';
-    cardTitle.textContent = 'Name';
-    cardBody.appendChild(cardTitle);
-
-    // Create the card text
-    var cardText = document.createElement('p');
-    cardText.className = 'card-text';
-    cardText.textContent = 'John Doe';
-    cardBody.appendChild(cardText);
-
-    // Add the background image
-    document.body.style.backgroundImage = 'url("https://example.com/student-dashboard-photo.jpg")';
-    document.body.style.backgroundSize = 'cover';
-    document.body.style.backgroundPosition = 'center';
-    document.body.style.backgroundRepeat = 'no-repeat';
-
-    // Add some extra CSS styles to improve the look and feel of the dashboard
-    document.body.style.color = 'white';
-    document.body.style.fontFamily = 'Arial, sans-serif';
-});
+  `;
+}

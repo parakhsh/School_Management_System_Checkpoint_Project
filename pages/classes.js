@@ -28,10 +28,10 @@ export default function generateClassContent() {
           <div class="card mb-3">
               <div class="card-body">  
               <div class="d-flex justify-content-end">
-              <buttonclass="btn btn-custom " type="button" id="edit">
+              <button class="btn btn-custom " type="button" id="editClassButton">
               <img src="./pictures/edit.png" alt="Add New Student" width="50" height="50"></button>
               
-              <button class="btn btn-custom " type="buttonid="remove" ">
+              <button id="deleteClassButton" class="btn btn-custom " type="buttonid="remove" ">
               <img src="./pictures/minus.png" alt="Add New Student" width="50" height="50">
               </button>
               </div>
@@ -48,8 +48,8 @@ export default function generateClassContent() {
   <div class="text-center">
        <div class="d-grid gap-2 d-md justify-content-md-center">
           <!-- Circular button with custom image -->
-          <button class="btn btn-custom " type="button">
-          <img src="./pictures/add.png" alt="Add New Student" width="50" height="50">
+          <button id="addClassButton" class="btn btn-custom " type="button">
+          <img src="./pictures/add.png" alt="Add New class" width="50" height="50">
           </button>
           <p class="card-text">Add New Class</p>
   </div>
@@ -58,3 +58,4 @@ export default function generateClassContent() {
 `;
   
 }
+

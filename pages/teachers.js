@@ -1,7 +1,24 @@
-
 export default function generateTeacherContent() {
-   
+    // Retrieve teachers data from local storage
+    const storedData = localStorage.getItem('teachers');
+    let lastPersonName = '';
+    let oneBeforeLastPersonName = '';
   
+    if (storedData) {
+      const teachers = JSON.parse(storedData);
+  
+      // Check if there are any teachers in the array
+      if (teachers.length > 0) {
+        // Get the last teachers's name
+        lastPersonName = teachers[teachers.length - 1].name;
+  
+        // Check if there is more than one teachers in the array
+        if (teachers.length > 1) {
+          // Get the one before the last teachers's name
+          oneBeforeLastPersonName = teachers[teachers.length - 2].name;
+        }
+      }
+    }
     return `
       <h1 class="mb-5 ">Teachers</h1>
       <div class="container mt-5">
@@ -17,7 +34,7 @@ export default function generateTeacherContent() {
                     <img src="./pictures/minus.png" alt="Remove" width="50" height="50">
                   </button>
                 </div>
-                <h5 class="card-title">Max Hermann</h5>
+                <h5 class="card-title">${oneBeforeLastPersonName}</h5>
                 <p class="card-text">Fullstack</p>
                 <!-- Add link for Teachers -->
                 <a href="#"  id="" class="card-link text-primary">Students</a>
@@ -36,7 +53,7 @@ export default function generateTeacherContent() {
                   <img src="./pictures/minus.png" alt="Remove" width="50" height="50">
                   </button>
                 </div>
-                <h5 class="card-title">Anthony Egbe</h5>
+                <h5 class="card-title">${lastPersonName}</h5>
                 <p class="card-text">Cloud</p>
                 <!-- Add link for Classes -->
                 <a href="#" class="card-link text-primary">Students</a>
@@ -59,4 +76,3 @@ export default function generateTeacherContent() {
    
     `;
   }
-  

@@ -1,5 +1,25 @@
 export default function generateClassContent() {
-  return`
+    // Retrieve classes data from local storage
+    const storedData = localStorage.getItem('classes');
+    let lastClassName = '';
+    let oneBeforelastClassName = '';
+  
+    if (storedData) {
+      const classes = JSON.parse(storedData);
+  
+      // Check if there are any classes in the array
+      if (classes.length > 0) {
+        // Get the last classes's name
+        lastClassName = classes[classes.length - 1].name;
+  
+        // Check if there is more than one classes in the array
+        if (classes.length > 1) {
+          // Get the one before the last classes's name
+          oneBeforelastClassName  = classes[classes.length - 2].name;
+        }
+      }
+    }
+    return`
   <h1 class="mb-5 ">Classes</h1>
 
   <div class="container mt-5">
@@ -15,7 +35,7 @@ export default function generateClassContent() {
               <img src="./pictures/minus.png" alt="Add New Student" width="50" height="50">
               </button>
               </div>
-                  <h5 class="card-title">Max Hermann</h5>
+                  <h5 class="card-title">${oneBeforelastClassName}</h5>
                   <p class="card-text">Fullstack</p>
                   
                   <!-- Add link for Teachers -->
@@ -35,7 +55,7 @@ export default function generateClassContent() {
               <img src="./pictures/minus.png" alt="Add New Student" width="50" height="50">
               </button>
               </div>
-                  <h5 class="card-title">Anthony Egbe</h5>
+                  <h5 class="card-title">${lastClassName}</h5>
                   <p class="card-text">Cloud</p>
                  
                   <!-- Add link for Classes -->
@@ -58,4 +78,3 @@ export default function generateClassContent() {
 `;
   
 }
-

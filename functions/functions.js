@@ -1,15 +1,17 @@
-import classes from "../School_Data/classes_Data.js"
-import students from "../School_Data/students_Data.js"
-import teachers from "../School_Data/teachers_Data.js"
-
-function countEl (elements){
- return elements.length;
-}
-
-
-const classCount = countEl(classes);
-const teachersCount = countEl(teachers);
-const studentsCount = countEl(students);
-
-
-export {classCount, teachersCount, studentsCount}
+function countElFromLocalStorage(key) {
+    const storedData = localStorage.getItem(key);
+  
+    if (storedData) {
+      const elements = JSON.parse(storedData);
+      return elements.length;
+    } else {
+      return 0;
+    }
+  }
+  
+  // Example usage:
+  const classCount = countElFromLocalStorage('classes');
+  const teachersCount = countElFromLocalStorage('teachers');
+  const studentsCount = countElFromLocalStorage('students');
+  
+  export { classCount, teachersCount, studentsCount };

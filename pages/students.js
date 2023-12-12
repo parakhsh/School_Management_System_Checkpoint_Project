@@ -25,8 +25,8 @@ export default function generateStudentContent() {
             <div class="card mb-3">
                 <div class="card-body">
                 <div class="d-flex justify-content-end">
-                <buttonclass="btn btn-custom " type="button" id="editStudentButton">
-                <img src="./pictures/edit.png" alt="Add New Student" width="50" height="50"></button>
+                <button class="btn btn-custom " type="button" id="editStudentButton">
+                <img src="./pictures/edit.png" alt="edit Student" width="50" height="50"></button>
                 
                 <button id="deleteStudentButton" class="btn btn-custom " type="button">
                 <img src="./pictures/minus.png" alt="delete Student" width="50" height="50">

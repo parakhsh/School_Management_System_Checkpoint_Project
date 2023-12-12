@@ -1,3 +1,7 @@
+import addNewClass from "./addFunction/addClass.js"
+import addNewStudent from "./addFunction/addStudent.js"
+import addNewTeacher from "./addFunction/addTeacher.js"
+
 export default function addButton() {
     const addClassButton = document.getElementById('addClassButton');
     const addteacherButton = document.getElementById('addteacherButton');
@@ -6,19 +10,19 @@ export default function addButton() {
   
     if (addClassButton) {
       addClassButton.addEventListener('click', function () {
-        console.log('Add New Class button clicked');
+        addNewClass();
         
       });
     } 
     else if (addteacherButton) {
       addteacherButton.addEventListener('click', function () {
-        console.log('Add New techer button clicked');
+        addNewTeacher();
      
       });
     } 
     else if (addStudentButton) {
       addStudentButton.addEventListener('click', function () {
-        console.log('Add New student button clicked');
+        addNewStudent();
       
       });
     } 
@@ -26,5 +30,7 @@ export default function addButton() {
       console.error('Add New Class button not found');
     }
   }
+
+
 
 

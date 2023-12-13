@@ -1,7 +1,10 @@
-
-import { studentsCount,teachersCount,classCount} from "../../functions/functions.js";
-  export default function generateHomeContent() {
-    return `
+import {
+  studentsCount,
+  teachersCount,
+  classCount,
+} from "../../functions/functions.js";
+export default function generateHomeContent() {
+  return `
     <div class="container text-center mt-5" id="content-container">
     <h1 class="text mt-5 p-4">Welcome Mirjam</h1></br></br>
     <div class="row">
@@ -33,6 +36,4 @@ import { studentsCount,teachersCount,classCount} from "../../functions/functions
 
    
   `;
-    
-  }
-  
+}

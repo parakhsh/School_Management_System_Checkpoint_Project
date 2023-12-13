@@ -1,25 +1,25 @@
 export default function generateClassContent() {
-    // Retrieve classes data from local storage
-    const storedData = localStorage.getItem('classes');
-    let lastClassName = '';
-    let oneBeforelastClassName = '';
-  
-    if (storedData) {
-      const classes = JSON.parse(storedData);
-  
-      // Check if there are any classes in the array
-      if (classes.length > 0) {
-        // Get the last classes's name
-        lastClassName = classes[classes.length - 1].name;
-  
-        // Check if there is more than one classes in the array
-        if (classes.length > 1) {
-          // Get the one before the last classes's name
-          oneBeforelastClassName  = classes[classes.length - 2].name;
-        }
+  // Retrieve classes data from local storage
+  const storedData = localStorage.getItem("classes");
+  let lastClassName = "";
+  let oneBeforelastClassName = "";
+
+  if (storedData) {
+    const classes = JSON.parse(storedData);
+
+    // Check if there are any classes in the array
+    if (classes.length > 0) {
+      // Get the last classes's name
+      lastClassName = classes[classes.length - 1].name;
+
+      // Check if there is more than one classes in the array
+      if (classes.length > 1) {
+        // Get the one before the last classes's name
+        oneBeforelastClassName = classes[classes.length - 2].name;
       }
     }
-    return`
+  }
+  return `
   <h1 class="mb-5 ">Classes</h1>
 
   <div class="container mt-5">
@@ -76,5 +76,4 @@ export default function generateClassContent() {
 </div>
 
 `;
-  
 }

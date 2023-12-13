@@ -1,25 +1,25 @@
 export default function generateTeacherContent() {
-    // Retrieve teachers data from local storage
-    const storedData = localStorage.getItem('teachers');
-    let lastPersonName = '';
-    let oneBeforeLastPersonName = '';
-  
-    if (storedData) {
-      const teachers = JSON.parse(storedData);
-  
-      // Check if there are any teachers in the array
-      if (teachers.length > 0) {
-        // Get the last teachers's name
-        lastPersonName = teachers[teachers.length - 1].name;
-  
-        // Check if there is more than one teachers in the array
-        if (teachers.length > 1) {
-          // Get the one before the last teachers's name
-          oneBeforeLastPersonName = teachers[teachers.length - 2].name;
-        }
+  // Retrieve teachers data from local storage
+  const storedData = localStorage.getItem("teachers");
+  let lastPersonName = "";
+  let oneBeforeLastPersonName = "";
+
+  if (storedData) {
+    const teachers = JSON.parse(storedData);
+
+    // Check if there are any teachers in the array
+    if (teachers.length > 0) {
+      // Get the last teachers's name
+      lastPersonName = teachers[teachers.length - 1].name;
+
+      // Check if there is more than one teachers in the array
+      if (teachers.length > 1) {
+        // Get the one before the last teachers's name
+        oneBeforeLastPersonName = teachers[teachers.length - 2].name;
       }
     }
-    return `
+  }
+  return `
       <h1 class="mb-5 ">Teachers</h1>
       <div class="container mt-5">
         <div class="row">
@@ -75,4 +75,4 @@ export default function generateTeacherContent() {
 
    
     `;
-  }
+}

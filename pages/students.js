@@ -1,25 +1,32 @@
+// import editStudent from "../functions/editFunction/editStudent.js";
+import calculateAverage from "../functions/average.js";
 
 export default function generateStudentContent() {
-    // Retrieve students data from local storage
-    const storedData = localStorage.getItem('students');
-    let lastPersonName = '';
-    let oneBeforeLastPersonName = '';
-    
-    if (storedData) {
-      const students = JSON.parse(storedData);
-  
-      // Check if there are any students in the array
-      if (students.length > 0) {
-        // Get the last student's name
-        lastPersonName = students[students.length - 1].name;
-  
-        // Check if there is more than one student in the array
-        if (students.length > 1) {
-          // Get the one before the last student's name
-          oneBeforeLastPersonName = students[students.length - 2].name;
-        }
+  // Retrieve students data from local storage
+  const storedData = localStorage.getItem("students");
+  let lastPersonName = "";
+  let oneBeforeLastPersonName = "";
+
+  if (storedData) {
+    const students = JSON.parse(storedData);
+
+    // Check if there are any students in the array
+    if (students.length > 0) {
+      // Get the last student's name
+      lastPersonName = students[students.length - 1].name;
+
+      // Check if there is more than one student in the array
+      if (students.length > 1) {
+        // Get the one before the last student's name
+        oneBeforeLastPersonName = students[students.length - 2].name;
       }
     }
+  }
+
+  // document.getElementById('editStudentButton').addEventListener('click', function() {
+
+  //   editStudent();
+  // });
 
   return `
   <h1 class="mb-5 ">Students</h1>
@@ -39,7 +46,7 @@ export default function generateStudentContent() {
             </div>
             <h5 class="card-title">${oneBeforeLastPersonName}</h5>
             <p class="card-text" id="studentName">Fullstack</p>
-            <p class="card-text text-primary" id="average" >Average Grade: 5.3 </p>
+            <p class="card-text text-primary" id="average" >Average Grade: 85 </p>
           </div>
         </div>
       </div>
@@ -56,7 +63,7 @@ export default function generateStudentContent() {
             </div>
             <h5 class="card-title">${lastPersonName}</h5>
             <p class="card-text">Cloud</p>
-            <p class="card-text text-primary">Average Grade:</p>
+            <p class="card-text text-primary">Average Grade:95</p>
             <!-- Add link for Classes -->
           </div>
         </div>
@@ -73,6 +80,3 @@ export default function generateStudentContent() {
   </div>
 `;
 }
-
-
-

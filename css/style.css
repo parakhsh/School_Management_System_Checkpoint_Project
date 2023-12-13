@@ -1,0 +1,59 @@
+/*
+GENERAL STYLES
+*/
+
+ul{
+    list-style: none;
+    display: flex;
+    padding-right: 700px;
+    font-size: large;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/*
+PAGE LAYOUT STYLES
+*/
+.navigation{
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(241, 240, 240)
+}
+
+.footer{
+    background-color: gray;
+    margin-top: auto;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-between;
+    align-items: left;
+}
+
+img{
+  width: 50px;
+}
+
+/*
+Component specific styles
+*/
+.custom-image {
+    width: 50px;
+    height: auto;
+}
+
+
+.navigation ul li {
+    margin-right: 40px;
+}
+
+.footer ul li {
+    margin-right: 40px;
+}

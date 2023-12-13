@@ -1,48 +1,30 @@
-// import addNewClass from "./addFunction/addClass.js"
-// import addNewStudent from "./addFunction/addStudent.js"
-// import addNewTeacher from "./addFunction/addTeacher.js"
+export default function calculateAverage(student) {
+  const subjects = student.subjects;
+  const totalGrade = Object.values(subjects).reduce((sum, grade) => sum +parseFloat(grade), 0);
+ 
+  const averageGrade = totalGrade / Object.keys(subjects).length;
+  return averageGrade.toFixed(2);
+}
 
-// export default function addButton() {
-//     const addClassButton = document.getElementById('addClassButton');
-//     const addteacherButton = document.getElementById('addteacherButton');
-//     const addStudentButton = document.getElementById('addStudentButton');
-    
-  
-//     if (addClassButton) {
-//       addClassButton.addEventListener('click', function () {
-//         addNewClass();
-        
-//       });
-//     } 
-//     else if (addteacherButton) {
-//       addteacherButton.addEventListener('click', function () {
-//         addNewTeacher();
-     
-//       });
-//     } 
-//     else if (addStudentButton) {
-//       addStudentButton.addEventListener('click', function () {
-//         addNewStudent();
-      
-//       });
-//     } 
-//     else {
-//       console.error('Add New Class button not found');
-//     }
-//   }
+function displayLastTwoStudentAverages(students) {
+  const lastStudent = students[students.length - 1];
+  const secondLastStudent = students[students.length - 2];
 
-
-  function AverageFromLocalStorage(key) {
-    const storedData = localStorage.getItem(key);
-  
-    if (storedData) {
-      const elements = JSON.parse(storedData);
-      return elements.length;
-    } else {
-      return 0;
-    }
+  if (lastStudent) {
+    const lastStudentAverage = calculateAverage(lastStudent);
+    console.log(`Average Grade for Last Student (${lastStudent.name}): ${lastStudentAverage}`);
   }
 
-  const studentsAverage = AverageFromLocalStorage('students');
-  
-  export { studentsAverage };
+  if (secondLastStudent) {
+    const secondLastStudentAverage = calculateAverage(secondLastStudent);
+    console.log(`Average Grade for Second Last Student (${secondLastStudent.name}): ${secondLastStudentAverage}`);
+  }
+}
+
+// Retrieve student data from local storage
+const storedStudents = localStorage.getItem('students');
+const students = storedStudents ? JSON.parse(storedStudents) : [];
+
+// Example of how to use the function
+displayLastTwoStudentAverages(students);
+

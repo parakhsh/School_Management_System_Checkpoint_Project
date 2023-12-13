@@ -1,9 +1,10 @@
+
 export default function generateStudentContent() {
     // Retrieve students data from local storage
     const storedData = localStorage.getItem('students');
     let lastPersonName = '';
     let oneBeforeLastPersonName = '';
-  
+    
     if (storedData) {
       const students = JSON.parse(storedData);
   
@@ -19,6 +20,7 @@ export default function generateStudentContent() {
         }
       }
     }
+
   return `
   <h1 class="mb-5 ">Students</h1>
 
@@ -37,7 +39,7 @@ export default function generateStudentContent() {
             </div>
             <h5 class="card-title">${oneBeforeLastPersonName}</h5>
             <p class="card-text" id="studentName">Fullstack</p>
-            <p class="card-text text-primary" id="average" >Average Grade: 5.4</p>
+            <p class="card-text text-primary" id="average" >Average Grade: 5.3 </p>
           </div>
         </div>
       </div>
@@ -54,7 +56,7 @@ export default function generateStudentContent() {
             </div>
             <h5 class="card-title">${lastPersonName}</h5>
             <p class="card-text">Cloud</p>
-            <p class="card-text text-primary">Average Grade: 4.9</p>
+            <p class="card-text text-primary">Average Grade:</p>
             <!-- Add link for Classes -->
           </div>
         </div>
@@ -71,3 +73,6 @@ export default function generateStudentContent() {
   </div>
 `;
 }
+
+
+

@@ -6,6 +6,7 @@ import addButton from "../functions/addBtn.js";
 import deleteButton from "../functions/deleteBtn.js"
 import editButton from "../functions/editBtn.js"
 
+
 export function loadPage(pageName) {
   let contentFunction;
 
@@ -33,6 +34,7 @@ export function loadPage(pageName) {
     addButton();
     deleteButton();
     editButton();
+  
   }
    else {
     console.error("Element with id 'content-container' not found or content function not defined.");
@@ -40,3 +42,6 @@ export function loadPage(pageName) {
 }
 
   
+
+
+

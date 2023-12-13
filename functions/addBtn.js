@@ -27,7 +27,7 @@ export default function addButton() {
       });
     } 
     else {
-      console.error('Add New Class button not found');
+      console.error('Add New button not found');
     }
   }
 
